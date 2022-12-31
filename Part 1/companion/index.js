@@ -12,8 +12,9 @@ geolocation.getCurrentPosition(locationSuccess, locationError, {
 });
 
 function locationSuccess(position) {
-  current_location = position.coords.latitude + ", " + position.coords.longitude
+  current_location = position.coords.latitude + "," + position.coords.longitude
   console.log("Current location: " + current_location);
+  getForecast(current_location);
 }
 
 function locationError(error) {
