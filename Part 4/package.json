@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "@fitbit/sdk": "~6.1.0"
+  },
+  "fitbit": {
+    "appUUID": "b10c1431-2a77-43cc-b751-34a65faf544b",
+    "appType": "app",
+    "appDisplayName": "It's Always Sunny",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#8bc34a",
+    "requestedPermissions": [
+      "access_internet",
+      "access_location"
+    ],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {
+      "en-US": {
+        "name": "It's Always Sunny"
+      }
+    },
+    "defaultLanguage": "en-US"
+  }
+}
