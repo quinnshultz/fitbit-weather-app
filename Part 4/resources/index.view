@@ -1,21 +1,21 @@
 <svg class="background">
   # Today's Forecast
-  <image id="today" x="20%+5" y="5%" width="33%" height="33%" pointer-events="visible" href="sunny.png"/>
-  <text id="hightoday" x="60%" y="20%" class="today">74</text>
-  <text id="lowtoday" x="60%" y="30%" class="today">21</text>
+  <image id="today" x="20%+5" y="5%" width="33%" height="33%" pointer-events="visible"/>
+  <text id="hightoday" x="60%" y="20%" class="today">-</text>
+  <text id="lowtoday" x="60%" y="30%" class="today">-</text>
   
-  <text id="forecasttoday" x="35%" y="50%+15">Sunny</text>
+  <text id="forecasttoday" x="50%" y="50%+15" class="forecast">-</text>
   
   # 3-Day Forecast
-  <image id="tomorrow" x="10" y="55%" width="25%" height="25%" pointer-events="visible" href="sunny.png"/>
-  <text id="highday1" x="15%" y="82%" class="forecast">74</text>
-  <text id="lowday1" x="15%" y="90%" class="forecast">21</text>
+  <image id="tomorrow" x="1%" y="55%" width="25%" height="25%"/>
+  <text id="highday1" x="15%" y="82%" class="forecast">-</text>
+  <text id="lowday1" x="15%" y="90%" class="forecast">-</text>
   
-  <image id="dayafter" x="35%" y="55%" width="25%" height="25%" pointer-events="visible" href="cloudy.png"/>
-  <text id="highday2" x="40%+24" y="82%" class="forecast">74</text>
-  <text id="lowday2" x="40%+24" y="90%" class="forecast">21</text>
+  <image id="dayafter" x="36%" y="55%" width="25%" height="25%"/>
+  <text id="highday2" x="50%" y="82%" class="forecast">-</text>
+  <text id="lowday2" x="50%" y="90%" class="forecast">-</text>
   
-  <image id="finalday" x="65%+10" y="55%" width="25%" height="25%" pointer-events="visible" href="sunny.png"/>
-  <text id="highday3" x="80%" y="82%" class="forecast">74</text>
-  <text id="lowday3" x="80%" y="90%" class="forecast">21</text>
+  <image id="finalday" x="72%" y="55%" width="25%" height="25%"/>
+  <text id="highday3" x="85%" y="82%" class="forecast">-</text>
+  <text id="lowday3" x="85%" y="90%" class="forecast">-</text>
 </svg>
