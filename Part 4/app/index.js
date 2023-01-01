@@ -35,25 +35,30 @@ inbox.onnewfile = () => {
     let tomorrow = document.getElementById("tomorrow");
     let dayafter = document.getElementById("dayafter");
     let finalday = document.getElementById("finalday");
-      
-    hightoday.text = `${JSON.parse(weather)[0].temperature} F`;
-    lowtoday.text = `${JSON.parse(weather)[1].temperature} F`;
-      
-    forecast.text = `${JSON.parse(weather)[0].shortForecast}`;
-      
-    hightomorrow.text = `${JSON.parse(weather)[2].temperature}`;
-    lowtomorrow.text = `${JSON.parse(weather)[3].temperature}`;
-      
-    highday2.text = `${JSON.parse(weather)[4].temperature}`;
-    lowday2.text = `${JSON.parse(weather)[5].temperature}`;
-      
-    highday3.text = `${JSON.parse(weather)[6].temperature}`;
-    lowday3.text = `${JSON.parse(weather)[7].temperature}`;
     
-    today.href = iconSelection(`${JSON.parse(weather)[0].shortForecast}`);
-    tomorrow.href = iconSelection(`${JSON.parse(weather)[2].shortForecast}`);
-    dayafter.href = iconSelection(`${JSON.parse(weather)[4].shortForecast}`);
-    finalday.href = iconSelection(`${JSON.parse(weather)[6].shortForecast}`);
+    try {
+      hightoday.text = `${JSON.parse(weather)[0].temperature} F`;
+      lowtoday.text = `${JSON.parse(weather)[1].temperature} F`;
+      
+      forecast.text = `${JSON.parse(weather)[0].shortForecast}`;
+      
+      hightomorrow.text = `${JSON.parse(weather)[2].temperature}`;
+      lowtomorrow.text = `${JSON.parse(weather)[3].temperature}`;
+      
+      highday2.text = `${JSON.parse(weather)[4].temperature}`;
+      lowday2.text = `${JSON.parse(weather)[5].temperature}`;
+      
+      highday3.text = `${JSON.parse(weather)[6].temperature}`;
+      lowday3.text = `${JSON.parse(weather)[7].temperature}`;
+    
+      today.href = iconSelection(`${JSON.parse(weather)[0].shortForecast}`);
+      tomorrow.href = iconSelection(`${JSON.parse(weather)[2].shortForecast}`);
+      dayafter.href = iconSelection(`${JSON.parse(weather)[4].shortForecast}`);
+      finalday.href = iconSelection(`${JSON.parse(weather)[6].shortForecast}`);
+    } catch (error) {
+      console.log(error);
+      forecast.text = "Forecast unavailable.";
+    }
   }
 
 };
@@ -72,6 +77,9 @@ function iconSelection(forecastToday) {
     case "Chance Snow Showers":
       return "chance_showers.png";
       break;
+    case "Isolated Rain Showers":
+      return "chance_showers.png";
+      break;
     case "Mostly Clear":
       return "mostly_sunny.png";
       break;
@@ -85,6 +93,9 @@ function iconSelection(forecastToday) {
       return "mostly_sunny.png";
       break;
     case "Partly Sunny then Slight Chance Snow Showers":
+      return "chance_showers.png";
+      break;
+    case "Scattered Rain Showers":
       return "chance_showers.png";
       break;
     case "Sunny":
